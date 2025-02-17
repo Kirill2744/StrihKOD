@@ -24,9 +24,18 @@ try:
 except:
     font = ImageFont.load_default()
 
-# Добавляем текст
+# Текст для отображения
 text = f"{phone_number}\n{document_name}"
-draw.text((10, img.height - 40), text, font=font, fill="black")
+
+# Рассчитываем размер текста
+text_width, text_height = draw.textsize(text, font=font)
+
+# Позиция текста: по центру внизу
+x = (img.width - text_width) / 2
+y = img.height - text_height - 10  # Отступ снизу 10 пикселей
+
+# Добавляем текст
+draw.text((x, y), text, font=font, fill="black")
 
 # Сохраняем финальное изображение
 img.save("barcode_with_text.png")
