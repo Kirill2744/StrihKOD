@@ -19,6 +19,5 @@ def create_barcode(phone, document):
 if __name__ == "__main__":
     phone_number = "+79123456789"
     document_name = "Договор №12345"
-    
-    
+
     create_barcode(phone_number, document_name)
