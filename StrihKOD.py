@@ -12,7 +12,7 @@ def загрузить_документы_из_excel(путь_к_файлу):
     """Загрузка данных из Excel файла"""
     try:
         df = pd.read_excel(путь_к_файлу)
-        return df[['Document Name', 'Document ID']]  # Оставляем английские названия колонок
+        return df[['Document Name', 'Document ID']]
     except Exception as e:
         messagebox.showerror("Ошибка", f"Ошибка загрузки файла Excel: {str(e)}")
         return None
