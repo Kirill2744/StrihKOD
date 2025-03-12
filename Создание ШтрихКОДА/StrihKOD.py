@@ -8,8 +8,8 @@ import os
 # Укажите путь к вашему файлу
 путь_к_файлу = 'C:\\Git\\StrihKOD\\документы.xlsx'
 
+# Загрузка данных из Excel файла
 def загрузить_документы_из_excel(путь_к_файлу):
-    """Загрузка данных из Excel файла"""
     try:
         df = pd.read_excel(путь_к_файлу)
         return df[['Document Name', 'Document ID']]
