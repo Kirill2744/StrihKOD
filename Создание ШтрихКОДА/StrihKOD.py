@@ -101,7 +101,7 @@ class PhoneApp:
             return
             
         # Создаем данные для штрих-кода
-        barcode_data = f"{doc_id}|{user_input}"
+        barcode_data = f"{doc_id}-{user_input}"
         
         try:
             # Генерация штрих-кода
